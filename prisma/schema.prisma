@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model TempAddress {
+  id        String   @id @default(uuid())
+  address   String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model Payment {
+  id        String        @id @default(uuid())
+  userId    String
+  address   String
+  amount    Float
+  txHash    String        @unique
+  status    PaymentStatus @default(pending)
+  createdAt DateTime      @default(now())
+}
+
+enum PaymentStatus {
+  pending
+  completed
+  failed
+}

@@ -1,0 +1,34 @@
+{
+  "name": "mrgasper",
+  "version": "1.0.0",
+  "description": "1. Общее описание проекта  Разработка платежной системы для принятия платежей в криптовалюте USDT в сети TRON (TRC-20 токены).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "__dev": "nodemon --exec ts-node src/app.ts",
+    "dev": "tsx src/app.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.1.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.13.0",
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "env-var": "^7.5.0",
+    "express": "^5.1.0",
+    "inversify": "^7.0.0-alpha.5",
+    "reflect-metadata": "^0.2.2",
+    "tronweb": "^6.0.4",
+    "tsx": "^4.20.3"
+  }
+}
